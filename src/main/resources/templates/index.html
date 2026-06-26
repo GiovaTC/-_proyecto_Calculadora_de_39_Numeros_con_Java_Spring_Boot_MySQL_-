@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Sumar 39 números</title>
+
+    <style>
+
+        input{
+
+            width:80px;
+            margin:4px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h2>Ingrese los 39 números</h2>
+
+<form action="/sumar" method="post">
+
+    <div>
+
+        <script>
+
+        </script>
+
+    </div>
+
+    <div id="campos"></div>
+
+    <br>
+
+    <button type="submit">
+
+        Calcular Suma
+
+    </button>
+
+</form>
+
+<h2 th:if="${resultado!=null}">
+
+    Resultado:
+
+    <span th:text="${resultado}"></span>
+
+</h2>
+
+<script>
+
+    let div=document.getElementById("campos");
+
+    for(let i=1;i<=39;i++){
+
+        div.innerHTML+=
+            "Número "+i+
+            ": <input type='number' step='any' name='numero' required><br>";
+
+    }
+
+</script>   
+</body>
+</html>

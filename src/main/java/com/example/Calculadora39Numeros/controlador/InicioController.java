@@ -42,5 +42,5 @@ public class InicioController {
         model.addAttribute("resultado", suma);
 
         return "index";
-    }   
+    }
 }
